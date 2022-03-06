@@ -88,7 +88,7 @@ async def start_bot():
             )
 
         else:
-            await app.send_message(LOG_GROUP_ID, "[DarkSmoke](https://t.me/Dark_Smoke_newbot)Bot started!")
+            await app.send_message(LOG_GROUP_ID, "[DarkSmoke](https://t.me/Dark_Smoke_newbot) Bot started!")
     except Exception:
         pass
 
@@ -255,10 +255,12 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello {first_name}, My name is {bot_name}.
-I'm a group management bot with some useful features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+        """Hello 👋 {first_name}, My name is {bot_name}.
+**I'm a group management bot with some useful features.☺ **
+
+You can choose an option below, by clicking a button 👇 .
+
+If [you](tg://settings) have any bugs or questions on how to use me, have a look at [My Update Chnnael](https://t.me/NBOT_TEAM), or head to @TEAM_NBOT_GROUOP..
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -294,13 +296,15 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-Hello {query.from_user.first_name}, My name is {BOT_NAME}.
-I'm a group management bot with some usefule features.
-You can choose an option below, by clicking a button.
-Also you can ask anything in Support Group.
+        Hello 👋 {query.from_user.first_name}, My name is {bot_name}.
+**I'm a group management bot with some useful features.☺ **
+
+You can choose an option below, by clicking a button 👇 .
+
+If [you](tg://settings) have any bugs or questions on how to use me, have a look at [My Update Chnnael](https://t.me/NBOT_TEAM), or head to @TEAM_NBOT_GROUOP.
 
 General command are:
- - /start: Start the bot
+ - /start: Start [Me](http://t.me/Dark_Smoke_newbot)
  - /help: Give this message
  """
     if mod_match:
