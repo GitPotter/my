@@ -88,7 +88,7 @@ async def start_bot():
             )
 
         else:
-            await app.send_message(LOG_GROUP_ID, "[DarkSmoke](https://t.me/Dark_Smoke_newbot) Bot started!")
+            await app.send_message(LOG_GROUP_ID, "[DarkSmoke](https://t.me/Dark_Smoke_newbot) Bot Is started! 😎")
     except Exception:
         pass
 
@@ -116,8 +116,8 @@ home_keyboard_pm = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 🖥",
-                callback_data="stats_callback",
+                text="Update Channel 🐲", url="https://t.me/NBOT_TEAM"
+               
             ),
             InlineKeyboardButton(
                 text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"
@@ -133,7 +133,9 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Hey there! My name is {BOT_NAME}.I the **most complete Bot** to help you manage your groups easily and safely!  "
+    f"Hello 👋 {first_name}, My name is **{bot_name}**.
+**I'm a group management bot with some useful features.☺ 
+  !  "
     + "group with lots of useful features, feel free to "
     + "add me to your group."
 )
@@ -153,8 +155,8 @@ keyboard = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="System Stats 💻",
-                callback_data="stats_callback",
+                text="Update Channel 🐲 ", url="https://t.me/NBOT_TEAM
+               
             ),
             InlineKeyboardButton(text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"),
         ],
