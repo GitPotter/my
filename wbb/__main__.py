@@ -88,7 +88,7 @@ async def start_bot():
             )
 
         else:
-            await app.send_message(LOG_GROUP_ID, "Bot started!")
+            await app.send_message(LOG_GROUP_ID, "[DarkSmoke](https://t.me/Dark_Smoke_newbot)Bot started!")
     except Exception:
         pass
 
@@ -107,7 +107,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Commands ❓", callback_data="bot_commands"
+                text="My Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
                 text="Darksmoke Repo 🛠",
