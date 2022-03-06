@@ -1,18 +1,14 @@
 """
 MIT License
-
 Copyright (c) 2021 TheHamkerCat
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -102,8 +98,8 @@ async def global_stats(_, message):
     karmas_chats_count = _karmas["chats_count"]
 
     # Contributors/Developers count and commits on github
-    url = "https://api.github.com/repos/neth1841/contributors"
-    rurl = "https://github.com/neth1841"
+    url = "https://api.github.com/repos/thehamkercat/williambutcherbot/contributors"
+    rurl = "https://github.com/neth1841/DarkSmokenewbot"
     developers = await get(url)
     commits = 0
     for developer in developers:
@@ -143,7 +139,6 @@ async def global_stats(_, message):
     **{karmas_count}** Karma, Across **{karmas_chats_count}** chats.
     **{served_users}** Users, Across **{served_chats}** chats.
     **{developers}** Developers And **{commits}** Commits On **[Github]({rurl})**.
-
 **Global Stats of {USERBOT_NAME}**:
     **{total_ub} Dialogs.**
     **{groups_ub} Groups Joined.**
