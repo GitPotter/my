@@ -99,7 +99,7 @@ async def global_stats(_, message):
 
     # Contributors/Developers count and commits on github
     url = "https://api.github.com/repos/thehamkercat/williambutcherbot/contributors"
-    rurl = "https://github.com/neth1841/DarkSmokenewbot"
+    rurl = "https://github.com/thehamkercat/williambutcherbot"
     developers = await get(url)
     commits = 0
     for developer in developers:
