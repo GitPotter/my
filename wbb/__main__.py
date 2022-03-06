@@ -110,7 +110,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 text="Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
+                text="Darksmoke Repo 🛠",
                 url="https://github.com/neth1841",
             ),
         ],
@@ -133,7 +133,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Hey there! My name is {BOT_NAME}. I can manage your "
+    f"Hey there! My name is {BOT_NAME}.I the **most complete Bot** to help you manage your groups easily and safely!  "
     + "group with lots of useful features, feel free to "
     + "add me to your group."
 )
@@ -147,7 +147,7 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="Repo 🛠",
+                text="DarkSmoke Repo 🛠",
                 url="https://github.com/neth1841",
             ),
         ],
