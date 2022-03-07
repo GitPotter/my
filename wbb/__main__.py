@@ -133,12 +133,11 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Hello 👋 There, My name is **{bot_name}**.
-**I'm a group management bot with some useful features.☺ 
-  !  "
+    f"Hey there! My name is {BOT_NAME}. I can manage your "
     + "group with lots of useful features, feel free to "
     + "add me to your group."
 )
+
 
 
 keyboard = InlineKeyboardMarkup(
