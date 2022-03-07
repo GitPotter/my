@@ -1,18 +1,14 @@
 """
 MIT License
-
 Copyright (c) 2021 TheHamkerCat
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -88,7 +84,7 @@ async def start_bot():
             )
 
         else:
-            await app.send_message(LOG_GROUP_ID, "[DarkSmoke](https://t.me/Dark_Smoke_newbot) Bot Is started! 😎")
+            await app.send_message(LOG_GROUP_ID, "Bot started!")
     except Exception:
         pass
 
@@ -107,11 +103,11 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="My Commands ❓", callback_data="bot_commands"
+                text="Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
-                text="Darksmoke Repo 🛠",
-                url="https://github.com/neth1841",
+                text="Repo 🛠",
+                url="https://github.com/thehamkercat/WilliamButcherBot",
             ),
         ],
         [
@@ -120,7 +116,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"
+                text="Support 👨", url="http://t.me/WBBSupport"
             ),
         ],
         [
@@ -139,7 +135,6 @@ home_text_pm = (
 )
 
 
-
 keyboard = InlineKeyboardMarkup(
     [
         [
@@ -148,14 +143,16 @@ keyboard = InlineKeyboardMarkup(
                 url=f"t.me/{BOT_USERNAME}?start=help",
             ),
             InlineKeyboardButton(
-                text="DarkSmoke Repo 🛠",
-                url="https://github.com/neth1841",
+                text="Repo 🛠",
+                url="https://github.com/thehamkercat/WilliamButcherBot",
             ),
         ],
-              text="System Stats 💻",
+        [
+            InlineKeyboardButton(
+                text="System Stats 💻",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"),
+            InlineKeyboardButton(text="Support 👨", url="t.me/WBBSupport"),
         ],
     ]
 )
@@ -254,12 +251,10 @@ async def help_parser(name, keyboard=None):
     if not keyboard:
         keyboard = InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help"))
     return (
-        """Hello 👋 {first_name}, My name is {bot_name}.
-**I'm a group management bot with some useful features.☺ **
-
-You can choose an option below, by clicking a button 👇 .
-
-If [you](tg://settings) have any bugs or questions on how to use me, have a look at [My Update Chnnael](https://t.me/NBOT_TEAM), or head to @TEAM_NBOT_GROUOP..
+        """Hello {first_name}, My name is {bot_name}.
+I'm a group management bot with some useful features.
+You can choose an option below, by clicking a button.
+Also you can ask anything in Support Group.
 """.format(
             first_name=name,
             bot_name=BOT_NAME,
@@ -295,15 +290,12 @@ async def help_button(client, query):
     back_match = re.match(r"help_back", query.data)
     create_match = re.match(r"help_create", query.data)
     top_text = f"""
-        Hello 👋 {query.from_user.first_name}, My name is {bot_name}.
-**I'm a group management bot with some useful features.☺ **
-
-You can choose an option below, by clicking a button 👇 .
-
-If [you](tg://settings) have any bugs or questions on how to use me, have a look at [My Update Chnnael](https://t.me/NBOT_TEAM), or head to @TEAM_NBOT_GROUOP.
-
+Hello {query.from_user.first_name}, My name is {BOT_NAME}.
+I'm a group management bot with some usefule features.
+You can choose an option below, by clicking a button.
+Also you can ask anything in Support Group.
 General command are:
- - /start: Start [Me](http://t.me/Dark_Smoke_newbot)
+ - /start: Start the bot
  - /help: Give this message
  """
     if mod_match:
