@@ -133,7 +133,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Hello 👋 {first_name}, My name is **{bot_name}**.
+    f"Hello 👋 There, My name is **{bot_name}**.
 **I'm a group management bot with some useful features.☺ 
   !  "
     + "group with lots of useful features, feel free to "
@@ -153,10 +153,8 @@ keyboard = InlineKeyboardMarkup(
                 url="https://github.com/neth1841",
             ),
         ],
-        [
-            InlineKeyboardButton(
-                text="Update Channel 🐲 ", url="https://t.me/NBOT_TEAM
-               
+              text="System Stats 💻",
+                callback_data="stats_callback",
             ),
             InlineKeyboardButton(text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"),
         ],
