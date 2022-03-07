@@ -116,8 +116,8 @@ home_keyboard_pm = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="Update Channel 🐲", url="https://t.me/NBOT_TEAM"
-               
+                text="System Stats 🖥",
+                callback_data="stats_callback",
             ),
             InlineKeyboardButton(
                 text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"
