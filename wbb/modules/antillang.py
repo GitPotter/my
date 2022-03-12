@@ -2,7 +2,7 @@
 # Part of: Nexa-Userbot
 # re-write for rose by szsupunma
 
-from rose import app
+from wbb import app
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 
