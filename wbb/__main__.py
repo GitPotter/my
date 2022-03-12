@@ -84,7 +84,7 @@ async def start_bot():
             )
 
         else:
-            await app.send_message(LOG_GROUP_ID, "Bot started!")
+            await app.send_message(LOG_GROUP_ID, "**[Darksmoke](http://t.me/Dark_Smoke_newbot) Bot started!** ")
     except Exception:
         pass
 
@@ -103,7 +103,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="Commands ❓", callback_data="bot_commands"
+                text="My Commands ❓", callback_data="bot_commands"
             ),
             InlineKeyboardButton(
                 text="DarkSmoke Repo 🛠",
@@ -116,7 +116,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
                 callback_data="stats_callback",
             ),
             InlineKeyboardButton(
-                text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"
+                text="News Channel 🖥  ", url="https://t.me/NBOT_TEAM"
             ),
         ],
         [
@@ -129,7 +129,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
 )
 
 home_text_pm = (
-    f"Hey there! My name is **{BOT_NAME}**. I can manage your "
+    f"Hey there {first_name} ! My name is **{BOT_NAME}**. I can manage your "
     + "group with lots of useful features, feel free to "
     + "add me to your group."
 )
@@ -152,7 +152,7 @@ keyboard = InlineKeyboardMarkup(
                 text="System Stats 💻",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Support 👨", url="https://t.me/TEAM_NBOT_GROUOP"),
+            InlineKeyboardButton(text="News Channel 🖥", url="https://t.me/NBOT_TEAM"),
         ],
     ]
 )
