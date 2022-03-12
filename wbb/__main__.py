@@ -159,35 +159,6 @@ keyboard = InlineKeyboardMarkup(
 
 
 
-@app.on_message(filters.command(["start", f"@{BOT_USERNAME}"]))
-async def start(_, message):
-    FSub = await ForceSub(_, message)
-    if FSub == 400:
-        return
-    Time_Zone = "Asia/Kolkata"
-    zone = datetime.datetime.now(pytz.timezone(f"{Time_Zone}"))  
-    timer = zone.strftime("%I:%M %p")
-    dater = zone.strftime("%b %d")   
-    await app.send_message(
-                LOG_GROUP_ID,
-                f"""
-#NEW_USER
-username- {message.from_user.mention}
-userid- `{message.from_user.id}`
-started time - `2022 {dater}:{timer} `         
-                """
-            )
-    if message.chat.type != "private":
-        total=await app.get_chat_members_count(message.chat.id)
-        await app.send_message(
-                LOG_GROUP_ID,
-                f"""
-#NEW_GROUP
-Total users in group - {total}
-started time - `2022 {dater}:{timer} `         
-                """
-            )
-        
 @app.on_message(filters.command("start"))
 async def start(_, message):
     if message.chat.type != "private":
